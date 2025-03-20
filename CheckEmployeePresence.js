@@ -97,3 +97,29 @@ I
 
 console.log("Total Hrs: "+empHrs+" Emp Wage:" + empWage);
 
+//UC5- Calculating Wages till Number of Working Days or Total Working Hours per month is Reached
+const MAX_HRS_IN_MONTH = 100;
+
+//i changed from const NUM_OF_WORKING_DAYS = 10; to NUM_OF_WORKING_DAYS = 10;
+NUM_OF_WORKING_DAYS = 10;
+
+let totalEmpHrs = 0;
+
+let totalworkingDays = 0;
+
+while (totalEmpHrs <= MAX_HRS_IN_MONTH &&
+
+  totalWorkingDays < NUM_OF_WORKING_DAYS) {
+
+totalWorkingDays++;
+
+let empCheck = Math.floor(Math.random() * 10) % 3;
+
+totalEmpHrs += getWorkingHours (empCheck);
+  }
+//let empwage = totalEmpHrs * WAGE_PER_HOUR; changed
+empwage = totalEmpHrs * WAGE_PER_HOUR;
+
+console.log("UC5 Total Days:" + totalworkingDays +
+
+"Total Hrs: " + totalEmpHrs +" Emp Wage: " + empWage);
