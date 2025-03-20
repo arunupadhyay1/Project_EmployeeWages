@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-//UC1- To check employee presence
-=======
 //UC-1 To check employee presence 
->>>>>>> Stashed changes
 const IS_ABSENT = 0
 
 let empCheck= Math.floor(Math.random() * 10) % 2;
@@ -18,12 +14,7 @@ return;
 console.log("Employee is PRESENT");
 
 }
-<<<<<<< Updated upstream
-
-//UC2 Calculating Employee Wage
-=======
 //UC2 Calculating Employee Wage based on  part time or full time work
->>>>>>> Stashed changes
 const IS_PART_TIME = 1; IS_PART_TIME = 1
 
 const IS_FULL_TIME = 2;IS_FULL_TIME = 2
@@ -59,8 +50,6 @@ let empwage = empHrs * WAGE_PER_HOUR; empWage = 80, empHrs = 4, WAGE_PER_HOUR = 
 
 console.log("Emp Wage: " + empWage);
 
-<<<<<<< Updated upstream
-=======
 //UC3 Added a function to get work hours 
 function getWorkingHours (empCheck) {
 
@@ -80,13 +69,31 @@ function getWorkingHours (empCheck) {
     }
 }
     
-    let empHrs = 0;
+     empHrs = 0;
     
-    let empCheck= Math.floor(Math.random() * 10) % 3;
+     empCheck= Math.floor(Math.random() * 10) % 3;
     
     empHrs = getWorkingHours (empCheck);
     
     let empWage = empHrs *  WAGE_PER_HOUR;
     
     console.log("Emp Wage: " + empWage);
->>>>>>> Stashed changes
+
+//UC4-  Calculating Wages for a Month assuming 20 Working Days in a Month.
+const NUM_OF_WORKING_DAYS = 2;
+
+ empHrs = 0;
+
+for (let day = 0; day < NUM_OF_WORKING_DAYS; day++) {
+     let empCheck = Math.floor(Math.random() * 10) % 3;
+
+empHrs += getWorkingHours (empCheck);
+
+}
+
+ empwage = empHrs * WAGE_PER_HOUR;
+
+I   
+
+console.log("Total Hrs: "+empHrs+" Emp Wage:" + empWage);
+
