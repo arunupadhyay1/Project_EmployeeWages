@@ -241,3 +241,38 @@ console.log("UC6 - Total Days:" + totalworkingDays +
  
  console.log("UC 7G- Number of Days Emp Worked: "+ empDailyWageArr.reduce(totalDaysWorked, 0));
  
+ /////UC8-Store the Day and the Daily Wage along with the Total Wage 1. Use Map to store Day wise Wage 2. Compute the total wage using the Map
+MAX_HRS_IN_MONTH= 160;
+
+NUM_OF_WORKING_DAYS = 20;
+
+totalEmpHrs = 8;
+
+totalworkingDays = 8;
+
+empDailyWageArr = new Array();
+
+let empDailywageMap = new Map();
+
+function calcDailywage(empHrs) { 
+    return empHrs * WAGE_PER_HOUR;
+
+}
+
+while (totalEmpHrs <= MAX_HRS_IN_MONTH && 
+    totalWorkingDays < NUM_OF_WORKING_DAYS) { 
+        totalWorkingDays++; 
+        let empCheck= Math.floor(Math.random()* 10) % 3;
+        let empHrs = getWorkingHours(empCheck); 
+        TotalEmpHrs +=empHrs;
+        empDailyWageArr.push(calcDailywage(empHrs));
+        empDailywageMap.set(totalWorkingDays, calcDailywage(empHrs)); I
+}
+
+console.log(empDailyWageMap);
+function totalWages (totalWage, dailywage) {
+     return totalWage + dailywage;
+}
+console.log("UC7A Emp Wage Map totalhrs: "+
+
+Array.from(empDailywageMap.values()).reduce(totalWages, 0));
